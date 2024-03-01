@@ -1,0 +1,99 @@
+*{
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    background-color: aqua;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box {
+    background-color: white;
+    border-radius: 15px;
+    padding: 45px;
+    width: 375px;
+    max-width: 95%;
+    box-shadow: 5px 5px 10px 1px ;
+}
+@media (max-width:375px) {
+    .box{
+        padding: 75px 25px;
+    }
+}
+.box h1 {
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 35px;
+    text-align: center;
+}
+.box form div {
+    background-color: lightgray;
+    align-items: center;
+    display: flex;
+    padding: 10px;
+    border-radius: 30px;
+    margin-bottom: 25px
+}
+.box form div i {
+    color: gray;
+    font-size: 15px;
+    margin: 0 10px;
+}
+.box form div:hover i {
+    color: aqua;
+}
+.box form div input {
+    color: lightgray;
+    border: none;
+    background-color: inherit;
+    font-size: 12px;
+    outline:10px;
+    padding: 5px;
+    min-width: 0;
+    flex: 1;
+}
+.box form div input::placeholder {
+    color: gray;
+    font-size: 12px;
+    opacity: 1;
+}
+.box form div input[type=date]{
+    color:gray;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+.box form input[type=submit]{
+    border-radius: 30px;
+    padding: 15px;
+    width: 100%;
+    background-color: aqua;
+    font-weight: 700;
+    font-size: 12px;
+    color: white;
+    border: none;
+}
+.box form input[type=submit]:hover{
+    background-color: blueviolet;
+    cursor: pointer;
+}
+.box span {
+    font-size: 12px;
+    margin-top: 25px;
+    color: gray;
+    display: block;
+    text-align: center;
+}
+.box span a {
+    text-decoration: none;
+    font-weight: 500;
+    color: aqua;
+}
+.box span a:hover {
+    color: blueviolet;
+}

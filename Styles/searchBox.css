@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    background-color: aqua;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box {
+    background-color: white;
+    box-shadow: 5px 5px 10px 1px;
+    border-radius: 10px;
+    padding: 50px 75px;
+    margin: 10px 0;
+    max-width: 95%;
+    width: 800px;
+}
+.box img {
+    display: block;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+.box form {
+    border-radius: 25px;
+    background-color: lightgray;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.box form i {
+    color: gray;
+    padding: 10px;
+}
+.box form:hover i {
+    color: aqua;
+}
+.box form input[type=search] {
+    background-color: lightgray;
+    border: none;
+    flex: 1;
+    outline: none;
+    min-width: 0;
+    padding: 0 5px;
+}
+.box form input[type=submit] {
+    border-radius: 25px;
+    padding: 15px;
+    text-transform: uppercase;
+    background-color: aqua;
+    color: white;
+    border: none;
+    font-weight: 700;
+}
+.box form input[type=submit]:hover {
+    background-color: blueviolet;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .box {
+        padding: 35px 25px;
+    }
+    .box img {
+        width: 65%;
+    }
+    .box form {
+        padding: 5px;
+    }
+    .box form i {
+        font-size: 10px;
+    }
+    .box form input[type=search] {
+        padding: 0;
+    }
+    .box form input::placeholder {
+        font-size: 10px;
+    }
+    .box form input[type=submit] {
+        font-size: 10px;
+        padding: 9px;
+    }
+}

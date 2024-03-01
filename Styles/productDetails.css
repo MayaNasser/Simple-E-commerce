@@ -1,0 +1,174 @@
+*{
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    background-color: aqua;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box {
+    background-color: white;
+    padding: 45px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 1px;
+    margin: 15px 0;
+    width: 950px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto 1fr;
+   grid-template-areas: 
+   "images info"
+   "images description";
+   grid-gap: 35px;
+}
+.box .images {
+    grid-area: images;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+    "active active active"
+    "idle idle idle";
+    grid-gap: 3px;
+}
+.box .images .img-holder img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+.box .images .img-holder.active {
+    grid-area: active;
+}
+.box .images .img-holder:not(.active):hover {
+    opacity: 0.95;
+    cursor: pointer;
+}
+.box .basic-info {
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.box .basic-info .rate {
+    color: gold;
+}
+.box .basic-info span {
+    font-size: 25px;
+    font-weight: 800;
+}
+.box .basic-info .option a {
+    background-color: aqua;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    padding: 10px 15px;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 12px;
+}
+.box .basic-info .option a:hover {
+    background-color: blueviolet;
+}
+.box .description {
+    grid-area: description;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.box .description p {
+    color: gray;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.box .description .feature {
+    list-style: none;
+    color: gray;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.box .description .feature i {
+    margin-right: 5px;
+}
+.box .description .feature .fa-check-circle {
+    color: aqua;
+}
+.box .description .feature .fa-times-circle {
+    color: gold;
+}
+.box .description .social {
+    list-style: none;
+    display: flex
+}
+.box .description .social a {
+    color: gray;
+    margin-right: 15px;
+}
+.box .description .social a:hover {
+    color: aqua;
+}
+@media (max-width:991px) {
+    .box{
+        width: 750px;
+        grid-template-areas:
+        "info info"
+        "images description";
+    }
+    .box .basic-info .option a {
+        padding: 8.5px 12px;
+    }
+}
+@media screen and (max-width:991px) and (min-width:769px) {
+    .box .basic-info span {
+        position:absolute;
+        align-self:flex-end;
+    }
+    .box .basic-info .option {
+        position:absolute;
+        align-self:flex-end;
+        margin-top: 40px;
+    }
+}
+@media (max-width:768px) {
+    .box{
+        width: 600px;
+        grid-template-areas:
+        "images info"
+        "description description";
+    }
+    .box .images {
+        gap: 3px;
+    }
+    .box .images .img-holder img {
+        border-radius: 5px;
+    }
+}    
+@media (max-width:640px) {
+    .box {
+        width: 100%;
+        min-height: 100vh;
+        border-radius: 0;
+        padding: 35px;
+        margin: 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,auto);
+        grid-template-areas:
+        "images"
+        "info"
+        "description" ;
+    }
+}
+.home {
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    font-weight: 600;
+    display: flex;
+    justify-content: flex-end;
+}

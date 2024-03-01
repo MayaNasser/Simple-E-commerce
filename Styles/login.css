@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+}
+.container {
+    background-color: aqua;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box {
+    background-color: white;
+    border-radius: 10px;
+    width: 375px;
+    padding: 50px;
+    max-width: 95%;
+    box-shadow: 5px 5px 10px 1px ;
+}
+
+@media (max-width:480px) {
+    .box{
+        padding: 75px 25px;
+    }
+}
+
+.box h1 {
+    font-size: 35px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 45px;
+}
+label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 3px;
+    color: gray;
+}
+.box form div {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid gray;
+}
+.box form div:hover {
+    border-bottom-color:aqua;
+}
+.box form div:first-of-type {
+    margin-bottom: 35px;
+}
+.box form div i {
+    size: 15px;
+    padding-left: 10px;
+    color: gray;
+}
+.box form div:hover i {
+    color:aqua;
+}
+.box form div input {
+    font-size: 12px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    min-width: 0;
+    flex: 1;
+}
+.box form div input::placeholder {
+    color: gray;
+    opacity: 1;
+    font-size: 12px;
+}
+.box a {
+    color: gray;
+    text-decoration: none;
+    font-size: 12px;
+    display: block;
+}
+.box a:hover {
+    color: aqua;
+}
+.box form .forget {
+    float: right;
+    margin-top: 15px;
+}
+.box form input[type="button"] {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 250px;
+    background-color: aqua;
+    color: white;
+    width: 100%;
+    padding: 15px;
+    margin-top: 45px;
+}
+.box form input[type="button"]:hover {
+    background-color: blueviolet;
+    cursor: pointer;    
+}
+.box .signup {
+    margin-top: 25px;
+    text-align: center;
+    text-transform: uppercase;
+}
